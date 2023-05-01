@@ -47,7 +47,7 @@ header {
 }
 
 .profile-picture {
-	width: 18%;
+	width: 16%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,6 +58,7 @@ header {
 .profile-picture img {
 	width: 100%;
 	height: auto;
+  size-adjust: auto;
 	border-radius: 50%;
 }
 
@@ -70,13 +71,13 @@ header {
 }
 
 .basic-info h1 {
-	font-size: 34px;
+  font-size: auto;
   text-align: left;
 	margin: 0;
 }
 
 .basic-info p {
-	font-size: 18px;
+  font-size: auto;
   text-align: left;
 	margin: 5px 0;
 }
@@ -88,9 +89,7 @@ header {
   color: #fff;
   background-color: #4267B2;
   border: none;
-  margin-top: 200px;
-  margin-bottom: auto;
-  margin-right: auto;
+  margin-top: 170px;
 }
 
 .container {
@@ -129,7 +128,7 @@ header {
   margin-top: 50px;
   width: fit-content;
   height: fit-content;
-  margin-left: 150px;
+  margin-left: 11%;
   background-color: white;
   border-radius: 10px;
   padding: 35px;

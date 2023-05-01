@@ -16,7 +16,7 @@ function incrementarLikes() {
   const boton = document.querySelector('.btn-like');
   if (!boton.disabled) {
     likes++;
-    document.querySelector('#num-likes').textContent = `${likes} Likes`;
+    document.querySelector('#num-likes').innerHTML = `<b>${likes}</b> Likes`;
     boton.disabled = true;
   }
 }

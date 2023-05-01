@@ -22,3 +22,26 @@ function incrementarLikes() {
 }
 
 
+const formComentario = document.getElementById("form-comentario");
+const comentariosLista = document.getElementById("comentarios-lista");
+
+formComentario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const inputUsuario = document.getElementById("input-usuario");
+  const inputComentario = document.getElementById("input-comentario");
+
+  if (inputUsuario.value === "" || inputComentario.value === "") {
+    alert("Por favor ingresa un usuario y un comentario");
+  } else {
+    const nuevoComentario = document.createElement("p");
+    nuevoComentario.classList.add("p-comentarios");
+    nuevoComentario.innerHTML = `<strong>${inputUsuario.value} </strong>${inputComentario.value}<button class="btn-eliminar" onclick="eliminarComentario(this)">Eliminar</button>`;
+    comentariosLista.appendChild(nuevoComentario);
+    inputUsuario.value = "";
+    inputComentario.value = "";
+  }
+});
+
+function eliminarComentario(btnEliminar) {
+  btnEliminar.parentNode.remove();
+}

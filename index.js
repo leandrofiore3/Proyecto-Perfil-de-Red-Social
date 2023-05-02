@@ -1,4 +1,4 @@
-
+// FOLLOW AND UNFOLLOW BUTTON
 
 const followButton = document.getElementById("follow-button");
 
@@ -12,10 +12,12 @@ followButton.addEventListener("click", function() {
   }
 });
 
+
+// LIKE BUTTON
 let likes = 200;
 let liked = false;
 
-function actualizarBoton() {
+function actualizarBotonLike() {
   const boton = document.querySelector('.btn-like');
   if (liked) {
     boton.classList.remove('btn-like--liked');
@@ -30,15 +32,17 @@ function actualizarBoton() {
   liked = !liked;
 }
 
+// INCREMENTAR LIKES
 function incrementarLikes() {
   const boton = document.querySelector('.btn-like');
   if (!boton.disabled) {
-    actualizarBoton();
+    actualizarBotonLike();
     boton.disabled = true;
   }
 }
 
 
+// WRITE AND ELIMINATE COMMENTS
 const formComentario = document.getElementById("form-comentario");
 const comentariosLista = document.getElementById("comentarios-lista");
 

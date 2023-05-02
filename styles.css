@@ -1,3 +1,5 @@
+/* BODY AND FONT */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 body {
@@ -5,6 +7,7 @@ body {
     background-color: rgb(228, 222, 222);
 }
 
+/* HEADER AND NAVBAR */
 header {
 	background-color: #4267B2;
 	display: flex;
@@ -36,6 +39,7 @@ header {
   color: #4267B2;
 }
 
+/* BASIC INFO */
 .info {
 	width: 80%;
 	margin: auto;
@@ -92,11 +96,13 @@ header {
   margin-top: 170px;
 }
 
+/* ABOUT ME AND PUBLICATION */
 .container {
   display: flex;
   width: 90%;
 }
 
+/* ABOUT ME */
 #sobre-mi {
   flex-basis: 30%;
   order: 2;
@@ -122,6 +128,7 @@ header {
   line-height: 1.5;
 }
 
+/* PUBLICATION */
 .publicacion {
   flex-basis: 70%;
   order: 1;

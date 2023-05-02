@@ -1,3 +1,5 @@
+
+
 const followButton = document.getElementById("follow-button");
 
 followButton.addEventListener("click", function() {
@@ -10,13 +12,28 @@ followButton.addEventListener("click", function() {
   }
 });
 
-let likes = 200; 
+let likes = 200;
+let liked = false;
+
+function actualizarBoton() {
+  const boton = document.querySelector('.btn-like');
+  if (liked) {
+    boton.classList.remove('btn-like--liked');
+    boton.textContent = 'Me gusta';
+    likes--;
+  } else {
+    boton.classList.add('btn-like--liked');
+    boton.textContent = 'Ya no me gusta';
+    likes++;
+  }
+  document.querySelector('#num-likes').innerHTML = `<b>${likes}</b> Likes`;
+  liked = !liked;
+}
 
 function incrementarLikes() {
   const boton = document.querySelector('.btn-like');
   if (!boton.disabled) {
-    likes++;
-    document.querySelector('#num-likes').innerHTML = `<b>${likes}</b> Likes`;
+    actualizarBoton();
     boton.disabled = true;
   }
 }

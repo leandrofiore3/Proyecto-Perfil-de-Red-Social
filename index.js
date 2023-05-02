@@ -46,13 +46,17 @@ function incrementarLikes() {
 const formComentario = document.getElementById("form-comentario");
 const comentariosLista = document.getElementById("comentarios-lista");
 
-formComentario.addEventListener("submit", (e) => {
-  e.preventDefault();
+formComentario.addEventListener("submit", (event) => {
+  event.preventDefault();
   const inputUsuario = document.getElementById("input-usuario");
   const inputComentario = document.getElementById("input-comentario");
-
+  
+  
   if (inputUsuario.value === "" || inputComentario.value === "") {
-    alert("Por favor ingresa un usuario y un comentario");
+    const mensaje = document.getElementById('mensaje');
+    mensaje.innerHTML = 'Por favor ingresa un usuario y un comentario';
+    mensaje.style.color = 'red';
+    mensaje.style.fontSize = 'bold'
   } else {
     const nuevoComentario = document.createElement("p");
     nuevoComentario.classList.add("p-comentarios");
@@ -60,6 +64,7 @@ formComentario.addEventListener("submit", (e) => {
     comentariosLista.appendChild(nuevoComentario);
     inputUsuario.value = "";
     inputComentario.value = "";
+    mensaje.innerHTML = "";
   }
 });
 
